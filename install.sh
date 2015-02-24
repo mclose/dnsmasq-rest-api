@@ -6,7 +6,7 @@ target=/opt/dnsmasq-rest-api/
 
 echo "Installing dnsmasq-rest-api to $target."
 
-[ -d $target ] || git clone git://github.com/bpaquet/dnsmasq-rest-api.git $target
+[ -d $target ] || git clone https://github.com/mclose/dnsmasq-rest-api.git $target
 
 echo "Configuring dnsmasq."
 
