@@ -21,7 +21,8 @@ chmod 0440 /etc/sudoers.d/dnsmasq
 echo "Configuring apache2"
 
 a2enmod rewrite
-ln -sf $target/config/apache2/dnsmasq-rest-api.conf /etc/apache2/conf.d/dnsmasq-rest-api.conf
+ln -sf $target/config/apache2/dnsmasq-rest-api.conf /etc/apache2/conf-available/dnsmasq-rest-api.conf
+a2enconf dnsmasq-rest-api.conf
 /etc/init.d/apache2 restart
 chown -R www-data $target/zones
 cp $target/www/config.example.php $target/www/config.php
